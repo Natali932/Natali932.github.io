@@ -1,0 +1,94 @@
+<html>
+<head>
+<meta charset="utf8"/>
+     <style>
+	 body>div {width:200px;height:200px;border:1px solid red;}
+	 div div {
+	 position:absolute;width:10px;height:10px;background:black;}
+	 div.hide {background:red};
+	 
+	 </style>
+   </head>
+   <body>123
+   <textarea></textarea>
+   <button onclick="new_table(10)">создать таблицу</button>
+   <button onclick="bukvi()">создать текст</button>
+   
+ <div></div>
+   
+
+   
+   
+   
+   
+   </body>
+  <script>
+  main_div=document.querySelector('div');
+  main_div.onmousedown=function(e)
+  div.classname
+  {main_div.onmousemove=function(e)
+   {
+   
+  div=document.createElement('div')
+  div.style.left=e.clientX;
+  div.style.top=e.clientY;
+  main_div.append(div);}
+  }
+ main_div.onmouseup=function(e)
+   { main_div.onmousemove=0; }
+  
+  
+  
+ 
+  
+  
+  
+  function bukvi() {
+  txt=document.querySelector("textarea");
+	slovo=txt.value;
+	for(i=0;i<slovo.length;i++) {
+
+    el=document.createElement('div');
+	el.innerHTML=slovo[i];
+	document.body.append(el);
+	
+
+  }
+  }
+  
+ 
+  
+  
+  function new_table()
+  {
+   txt=document.querySelector("textarea");
+	z=txt.value;
+  //x=0;
+  t=document.createElement('table');
+  t.border=1;
+
+  x=0;
+  
+ while(x<z){
+	tr=document.createElement('tr');
+		y=0;
+	while(y<z) { 
+	td=document.createElement('td');
+		td.innerHTML=x;
+		tr.append(td); 
+		y++;
+				}
+				
+		t.append(tr);		
+				
+				
+				x++;}
+				
+				
+				
+				document.body.append(t);
+				}
+  //new_table(10);
+  
+  
+  </script>

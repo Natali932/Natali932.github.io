@@ -1,0 +1,63 @@
+<html><head>
+<style>
+
+#chislo { font-size:60pt;
+ color:white; text-shadow: 2px 2px 3px #000;text-align: center; padding-top:5px; padding-bottom: 7px; }
+div {
+transition:1s;
+background-position:center;
+border:1px solid red;
+ background-repeat:no-repeat;
+background-size:contain;
+font-size:60pt; 
+color:black;
+  width: 100px;
+  height: 100px;
+ 
+ 
+}
+
+</style>
+</head>
+<body>
+
+
+<div  style="background-image: url(&quot;image3.jpg&quot;); margin-left: 51px; margin-top: 28px;">
+   
+ <div onclick="cunf();"  style="
+    position: absolute;
+    margin-left: -50px;
+    width: 46px;"> &lt; </div >
+
+    <div onclick="func();" style="
+    position: absolute;
+    margin-left: 100px;
+    width: 49px;"> &gt; </div>
+
+<div id="chislo"> </div>
+    
+</div>
+
+
+<script>
+x=0;
+function func() {
+console.log(x);
+if(x<3) {x++;} else {x=1;}
+some_div=document.querySelector('#chislo');
+some_div.innerHTML=x;
+//some_div.style.backgroundImage='url("image'+x+'.jpg")';
+
+}
+
+function cunf() {
+if (x>0) {x--;}
+else {x=3;}
+some_div=document.querySelector('#chislo');
+some_div.innerHTML=x;
+}
+
+</script>
+
+
+</body></html>

@@ -1,0 +1,66 @@
+  <html>
+<head>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    
+	
+   </head>
+   <body style="background: wood.jpg">
+<div class="container">
+<div class="row">
+<div 
+	onclick="move(1);"
+	class="border col-1 text-right" style="
+    text-align: right;
+">&lt;</div>
+<div id="chislo" class="border col-2" style="
+    text-align: center;
+">1</div>
+<div onclick="move(0);" 
+
+
+
+class="border col-1" style="
+    text-align: left;
+">&gt;</div> </div></div> 
+  <script>
+x=0;
+limit=15;
+shag=1
+div = document.querySelector("#chislo");
+
+	function move(napravlenie) { add;
+	if(napravlenie==1) {
+	 pred ();
+		if(x<0) { to_end();}// 
+						}
+	if(napravlenie==0) {
+		next();
+		if(x>limit) {to_start();}
+	update_div();
+		
+						}
+	////div.innerHTML=x;
+	function add()
+	{
+		console.log("add");
+	el=document.createElement('div')
+	el.innerHTML="новый див";
+	document.body.append(el);
+	
+	}	
+	
+	
+	function pred() {x-=shag;}
+	function next() {x+=shag;}
+	function to_start() {console.log ("restart");x=0;}
+	function to_end () {console.log ("restart");x=limit;}
+	function update_div() {div.innerHTML=x;}
+	
+x=0; alert(x);
+while (x<10) {x++; alert (x); }
+
+	
+	}</script>
+</body></html>
+
+
